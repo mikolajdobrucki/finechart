@@ -50,7 +50,7 @@ const data = [
   },
 ];
 
-export const BarChart: React.FC = () => {
+export function BarChart(): React.ReactElement {
   return (
     <div className="bg-white max-w-2xl p-4 border rounded-lg">
       <h2 className="text-lg font-semibold mb-4">Bar Chart</h2>
@@ -63,4 +63,4 @@ export const BarChart: React.FC = () => {
       </div>
     </div>
   );
-};
+}

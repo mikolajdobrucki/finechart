@@ -50,7 +50,7 @@ const data = [
   },
 ];
 
-export const LineChart: React.FC = () => {
+export function LineChart(): React.ReactElement {
   return (
     <div className="bg-white max-w-2xl p-4 border rounded-lg">
       <h2 className="text-lg font-semibold mb-4">Line Chart</h2>
@@ -68,4 +68,4 @@ export const LineChart: React.FC = () => {
       </div>
     </div>
   );
-};
+}
