@@ -17,7 +17,7 @@
     "./styles.css": "./dist/index.css"
   },
   "scripts": {
-    "build": "npm run build:css && tsup",
+    "build": "tsup && npm run build:css",
     "dev": "tsup src/index.tsx --format cjs,esm --dts --external react --watch",
     "clean": "rm -rf dist",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/index.css"
