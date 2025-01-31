@@ -1,15 +1,23 @@
 {
   "name": "finechart",
   "version": "0.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "dist/index.css"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles.css": "./dist/index.css"
+  },
   "scripts": {
-    "build": "npm run build:css && tsc",
+    "build": "npm run build:css && tsup",
     "dev": "tsup src/index.tsx --format cjs,esm --dts --external react --watch",
     "clean": "rm -rf dist",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/index.css"
